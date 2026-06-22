@@ -1,7 +1,7 @@
 <html>
   <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">  
-    <title>Dr Jack King's research website</title>
+    <title>Jack King's Research webpages</title>
     <!-- note relative link -->
     <link href="css/jrcking_style.css" rel="stylesheet">
   </head>
@@ -31,13 +31,48 @@
 
     <!-- HERE GOES THE CONTENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     <div class="content">
-      <h3>SUNSET-code</h3>
+      <h3>SUNSET CODES</h3>
       
-      The Scalable Unstructured Node-SET code is a flexible, adaptive high-order meshless framework for direct numerical simulations. It is primarily tailored towards premixed combustion problems, but has been adapted for isothermal flows of viscoelastic fluids.
+      The Scalable Unstructured Node-SET codes provide a flexible, adaptive high-order meshless framework for direct numerical simulations. They are primarily tailored towards premixed combustion problems, but have been adapted for isothermal flows of viscoelastic fluids.
       
-      More details and a first release to follow soon.
+      <br></br>
       
+      The codes can be found <a href="https://github.com/sunset-codes">here</a>
+      
+      <br></br>      
+      
+      Please note that these are academic codes under continuous development. For guidance on the numerical methods, please see the <a href="https://github.com/sunset-codes/sunset-flames/blob/main/docs/sunsetcode.pdf">code documentation</a> and related papers <a href="https://doi.org/10.1016/j.jcp.2020.109549">[1]</a><a href="https://doi.org/10.1016/j.jcp.2021.110760">[2]</a><a href="https://doi.org/10.1016/j.cma.2024.116762">[3]</a>.
+      
+      <br></br>      
+      
+      For advice or support using the code, please get in touch at jack (dot) king (at) manchester (dot) ac (dot) uk
+      
+      <br></br>            
+
+      <div class="sb"><hr></div>      
+      <h2>CODE FEATURES</h2>           
+      <ul>
+      <li>Fully compressible reacting multispecies Navier-Stokes equations</li>
+      <li>Spatial discretisation: LABFM in-plane, central FD in third dimension. 4th to 10th order (default 8th), dropping to 4th order on non-periodic boundaries.</li>
+      <li>Time integration: 3rd order explicit Runge-Kutta, with 2nd order embedded error estimation for dynamic time step control</li>
+      <li>Boundary conditions - characteristic based: adiabatic & isothermal walls, non-reflecting and hard inflows, non-reflecting outflows</li>
+      <li>Acceleration: MPI+OpenMP. Tested up to 32768 cores (85% parallel efficiency)</li>
+      <li>Transport models: a) mixture averaged, b) constant Le and Pr</li>
+      <li>Reaction mechanisms: arbitrary. Currently included: 1 step Arrhenius, 21 step H2-air, 25 step CH4-air, inert air</li>
+      </ul>
+
+      In addition, there is a <a href="https://github.com/sunset-codes/sunset-viscoelastic">branch</a> of the code dedicated to viscoelastic flows, which solves the isothermally compressible Navier-Stokes equations along with an evolution equation for the conformation tensor (log-conformation and Cholesky-log decomposition options available).      
+
+<!--      <div class="sb"><hr></div>      
+      <h2>EXAMPLES</h2>      
+      
+      <video width="721" height="367" controls>
+        <source src="vid/vid1.mp4" type="video/mp4">
+      </video>       
        
+      <img src="img/porous_streamlines.png" class="c" width="100%">        
+    
+        -->   
     </div>
   
   </body>
