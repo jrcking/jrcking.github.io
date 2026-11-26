@@ -1,84 +1,190 @@
-/* This is the style file for our website */
-@viewport {
-  width: device-width ;
-  zoom: 1.0 ;
-} 
-html {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
-    font-size:16px; text-align:left;
+body {background-color: white;
+margin-right: 0px;
+margin-left: 0px;
+margin-top: 0px;
+margin-bottom: 30px;
+font-family: arial, sans-serif;}
 
-}
-ol { padding:1; margin-left:2vw; line-height:1.5;}
-p {
-    color:black; font-size:16px; width:60vw; line-height:1.5;
-}
-p2 {
-    color:black; font-size:18px; width:60vw; line-height:2;
-}
-h3 {
-    color:black; font-size:24px; text-align:center;
-}
-h2 {
-    color:black; font-size:22px; text-align:left;
-}
-h1 {
-    color:black; font-size:18px; text-align:left; font-weight:bold;
-}
-h6 {
-    color:black; font-size:16px; text-align:center; font-weight:bold;
-}
-sb-text {
-    color:black; font-size:2vw; text-align:left; font-weight:bold; line-height:2;
-}
-table, th, td {
-    width:100%;
-    border:1px solid #000;
-    border-collapse:collapse;
-}
-iframe { width:50vw; height:50vh; }
-body { }
-.header-cont {width:100%; position:fixed; margin-left: 0px; top:0px;}
-.header {
-    height:9.5vw;
-    background:#FFF;
-    border:2px solid #FFF;
-    max-width:100vw;
-    margin: 0px auto;
-}
-.sidebar-cont {height:100%; position:fixed; margin-left:0px; top:12vw;}
-.sidebar {
-    height:70vh;
-    background:#FFF;
-    border:2px solid #000;
-    width:20vw;
-    margin:0px auto;
-}
-.content {
-    max-width:100vw;
-    margin:12vw auto;
-    margin-left:0vw;
-}
-.l-page {
-    height:90vh;
-    background:#FFF;
-    border:2px solid #000;
-    width:50%;
-    margin:0 auto;
-}
-.sb {
-    max-width:100vw;
-    margin:0vw auto;
-    clear: both;
-}
-img {  display: block; }
-img.wr {  max-width: 70%;  margin: 10px 0px; }
-img.r {  float: right;  margin-left: 10px; }
-img.l {  float: left;  margin-right: 10px; }
-img.c { margin-left:auto; margin-right:auto;}
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 640px) {
-    body { max-width: 100vw;}
+footer {
+color: navy;
+font-style: italics;
 }
 
+h1   {
+color: navy;
+margin-top: 0px;
+margin-bottom: -10px;}
 
+h2    {
+color: navy;
+margin-top: 10px;
+margin-bottom: 5px;}
+
+h3    {
+color: #087ca7;
+margin-top: 10px;
+margin-bottom: 5px;}
+
+em      {
+color: navy;
+font-style: italic;}
+
+em.banner   {
+color: white;
+font-style: normal;}
+
+em.new      {
+color: #d30017;
+font-style: normal;
+font-size: 1.4em;
+text-shadow: 1px 1px navy;}
+
+
+a.language:link, a.language:visited {
+  color: navy;
+  text-decoration: none;
+}
+
+li {
+padding-bottom : 15px;
+}
+
+a.page:link, a.page:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a.language:hover {
+  color: #d30017;
+  text-decoration: none;
+}
+
+a.page:hover {
+  color: #d30017;
+  text-decoration: none;
+}
+
+a:link, a:visited{
+  color: navy;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d30017;
+  text-decoration: none;
+}
+
+table.header {
+  width: 100%
+}
+
+table.header td:nth-child(1) {
+  width: 50%;
+}
+
+table.header td:nth-child(2) {
+  width: 50%;
+  text-align: right;
+}
+
+table.band {
+  padding-top: 17px;
+  width: 60%;
+  text-align: center;
+  color: white;
+}
+
+table.band td:nth-child(1) {
+  width: 15%;
+}
+
+table.band td:nth-child(2) {
+  width: 5%;
+}
+
+table.band td:nth-child(3) {
+  width: 15%;
+}
+
+table.band td:nth-child(4) {
+  width: 5%;
+}
+
+table.band td:nth-child(5) {
+  width: 15%;
+}
+
+table.band td:nth-child(6) {
+  width: 5%;
+}
+
+table.band td:nth-child(7) {
+  width: 15%;
+}
+
+table.band td:nth-child(8) {
+  width: 5%;
+}
+
+table.band td:nth-child(9) {
+  width: 15%;
+}
+
+table.twocol td{
+  padding: 5%}
+
+table.twocol td:nth-child(1) {
+  width: 35%;
+}
+
+table.twocol td:nth-child(2) {
+  width: 65%;
+}
+table.twocolr td{
+  padding: 5%}
+
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: white;
+  color: navy;
+  font-weight: bold;
+  font-size: 1.17em;
+  cursor: pointer;
+  padding: 16px;
+  width: 100%;
+  text-align: left;
+  border: 3px solid #087ca7;
+  border-radius: 12px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  outline: none;
+  transition: 0.1s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) #f8f4e3 */
+.active, .accordion:hover {
+  background-color: #a188a6; /* light mauve */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: #ede8ed;
+  display: none;
+  overflow: hidden;
+}
+
+/* Sign on the button + or - to indicate whether the panel is open */
+.accordion:after {
+  content: '+';
+  font-size: 1.1em;
+  color: navy;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: '-';
+}
